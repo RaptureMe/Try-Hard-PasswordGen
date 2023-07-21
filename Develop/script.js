@@ -10,8 +10,9 @@ function generatePassword() {
   var passLength = prompt ("How many characters do you want your password to be between 8-128 characters");
 
   if (passLength < 8 || passLength > 128) {
-    window.alert("Whoops, not 8-128 characters")
-    generatePassword()
+    window.alert("Whoops, not 8-128 characters");
+    generatePassword();
+    return;
   }
 
   var lowerCase = confirm ("Do you want lowercase in your password?");
@@ -20,34 +21,30 @@ function generatePassword() {
   var SpecialChar = confirm ("Do you want special characters in your password?");
 
   if (lowerCase == true) {
-    randomPassword += "abcdefghijklmnopqrstuvwxyz"
+    randomPassword += "abcdefghijklmnopqrstuvwxyz";
   }
 
   if (upperCase == true) {
-    randomPassword += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    randomPassword += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   }
 
   if (Numbers == true) {
-    randomPassword += "1234567890"
+    randomPassword += "1234567890";
   }
 
   if (SpecialChar == true) {
-    randomPassword += "~!@#$%^&*()_+-=`{}|[]:';'/?"
+    randomPassword += "~!@#$%^&*()_+-=`{}|[]:';'/?";
   }
 
-  console.log(randomPassword)
+  console.log(randomPassword);
 
-  function Randomizer(length, charset) {
-    var result = '';
-    for (let i = 0; i < length; i++) {
-      result += charset.charAt(Math.floor(Math.random() * charset.length));
-    }
-    return result;
+  var result = '';
+  for (let i = 0; i < passLength; i++) {
+    result += randomPassword.charAt(Math.floor(Math.random() * randomPassword.length));
   }
 
-  var result = Randomizer (passLength,randomPassword)
-  
   return result;
+
 }
 
 // Write password to the #password input
