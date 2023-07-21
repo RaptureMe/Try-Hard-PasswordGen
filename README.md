@@ -10,6 +10,10 @@ I learned that if you slow down, try to break down the problem one piece at a ti
 
 Load up the page, press the generate password button, follow the prompts, boom! Password ;D
 
+Link to live site: https://raptureme.github.io/Try-Hard-PasswordGen/
+
+Link to Git Repo: https://github.com/RaptureMe/Try-Hard-PasswordGen
+
 ## Credits
 
 - Couldn't have done it without the help of my tutor Patrick Meehan, really helped me slow down and not over complicate it
